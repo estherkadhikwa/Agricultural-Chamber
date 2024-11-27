@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - AgriChamber</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/html/home.html" class="logo">
+                <img src="/assets/logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
+                <h1>AgriChamber</h1>
+            </a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-nav">
+                    <li><a href="/html/home.html">Home</a></li>
+                    <li><a href="/html/aboutUs.html">About Us</a></li>
+                    <li><a href="/html/newsAndEvents.html">News and Events</a></li>
+                    <li><a href="/html/resources.html">Resources</a></li>
+                    <li><a href="/html/memberDirectory.html">Member Directory</a></li>
+                    <li><a href="/html/contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-outline">Member Login</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Our Services</h2>
+            </div>
+        </section>
+
+        <section class="services-intro">
+            <div class="container">
+                <p>AgriChamber offers a wide range of services to support and empower our agricultural community. From networking opportunities to educational programs, we're here to help you grow your business and stay ahead in the ever-evolving agricultural landscape.</p>
+            </div>
+        </section>
+
+        <section class="services-grid">
+            <div class="container">
+                <div class="service-card">
+                    <i data-lucide="users" aria-hidden="true"></i>
+                    <h3>Consulting</h3>
+                    <p>We offer expert consulting services to help businesses navigate market challenges, improve strategies, and optimize operations. Our experienced consultants provide tailored advice to ensure your business reaches its full potential.</p>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i data-lucide="book-open" aria-hidden="true"></i>
+                    <h3>Educational Workshops</h3>
+                    <p>Stay up-to-date with the latest agricultural practices, technologies, and regulations through our comprehensive educational workshops and seminars.</p>
+                    <a href="#" class="btn btn-secondary">View Schedule</a>
+                </div>
+                <div class="service-card">
+                    <i data-lucide="megaphone" aria-hidden="true"></i>
+                    <h3>Advocacy</h3>
+                    <p>We represent the interests of our members at local, state, and national levels, ensuring that the voice of the agricultural community is heard in policy discussions.</p>
+                    <a href="#" class="btn btn-secondary">Our Initiatives</a>
+                </div>
+                <div class="service-card">
+                    <i data-lucide="briefcase" aria-hidden="true"></i>
+                    <h3>Financing</h3>
+                    <p>We assist businesses in securing funding through various financial options, including loans, grants, and investor connections. Our team helps you identify and access the best financing opportunities for growth.</p>
+                    <a href="#" class="btn btn-secondary">Get Support</a>
+                </div>
+                <div class="service-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <h3>Certification Programs</h3>
+                    <p>Enhance your credibility and expertise through our industry-recognized certification programs, tailored for various agricultural specialties.</p>
+                    <a href="#" class="btn btn-secondary">Explore Certifications</a>
+                </div>
+                <div class="service-card">
+                    <i data-lucide="globe" aria-hidden="true"></i>
+                    <h3>Market linkages</h3>
+                    <p>Our market linkage services connect businesses to potential customers, suppliers, and strategic partners. We help you expand your network and reach new markets to grow your business effectively.</p>
+                    <a href="#" class="btn btn-secondary">Go Global</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h3>Ready to Leverage Our Services?</h3>
+                <p>Join AgriChamber today and unlock a world of opportunities for your agricultural business.</p>
+                <button class="btn btn-large">Become a Member</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="/html/newsAndEvents.html">News and Events</a></li>
+                        <li><a href="/html/contactUs.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Information</h4>
+                    <p>123 Farm Street, Agricultural City, Country</p>
+                    <p>Phone: +264 123 4567</p>
+                    <p>Email: info@agrichamber.com</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 AgriChamber. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Login Popup -->
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit"  class="btn btn-primary">Login</button>
+            </form>
+            <p class="auth-link">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+            <button class="close-popup">&times;</button>
+        </div>
+    </div>
+
+    <!-- Register Popup -->
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <p class="auth-link">Already have an account? <a href="#" id="show-login">Login here</a></p>
+            <button class="close-popup">&times;</button>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+

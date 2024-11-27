@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/html/home.html" class="logo">
+                <img src="/assets/logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
+                <h1>AgriChamber</h1>
+            </a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-nav">
+                    <li><a href="/html/home.html">Home</a></li>
+                    <li><a href="/html/aboutUs.html">About Us</a></li>
+                    <li><a href="/html/newsAndEvents.html">News and Events</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="/html/memberDirectory.html">Member Directory</a></li>
+                    <li><a href="/html/contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-outline">Member Login</button>
+        </div>
+    </header>
+    <section id="news-events">
+        <h1>News & Events</h1>
+        
+        <!-- News Articles -->
+        <div class="section" id="news-articles">
+            <h2>Latest News Articles</h2>
+            <div class="article">
+                <h3>New Business Initiative Launched</h3>
+                <p>Our Chamber has just launched a new initiative to support small businesses. This initiative provides resources, funding opportunities, and consulting services for startups.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="article">
+                <h3>Economic Growth in Our Region</h3>
+                <p>Recent economic reports show that our region is experiencing growth in key industries, which is expected to create more job opportunities and business prospects.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+        <!-- Press Releases -->
+        <div class="section" id="press-releases">
+            <h2>Press Releases</h2>
+            <div class="release">
+                <h3>Chamber Announces Annual Conference</h3>
+                <p>We are excited to announce the upcoming Annual Chamber Conference, which will feature industry leaders and innovators. The conference will be held on [Date].</p>
+                <a href="#">Read Press Release</a>
+            </div>
+        </div>
+
+        <!-- Event Calendar -->
+        <div class="section" id="event-calendar">
+            <h2>Upcoming Events</h2>
+            <div class="calendar">
+                <p><strong>November 30, 2024</strong> - Business Networking Event</p>
+                <p><strong>December 15, 2024</strong> - Annual Gala Dinner</p>
+                <p><strong>January 10, 2025</strong> - Entrepreneurship Workshop</p>
+            </div>
+        </div>
+
+        <!-- Success Stories -->
+        <div class="section" id="success-stories">
+            <h2>Success Stories</h2>
+            <div class="story">
+                <h3>Local Startup Breaks Sales Records</h3>
+                <p>One of our member startups has recently reached a new milestone, breaking sales records within its first year. This success is attributed to the support provided by the Chamber's resources.</p>
+                <a href="#">Read Full Story</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="newsAndEvents.html">News and Events</a></li>
+                        <li><a href="/html/contactUs.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Information</h4>
+                    <p>123 Farm Street, Agricultural City, Country</p>
+                    <p>Phone: +264 123 4567</p>
+                    <p>Email: info@agrichamber.com</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 AgriChamber. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Login Popup -->
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit"  class="btn btn-primary">Login</button>
+            </form>
+            <p class="auth-link">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+            <button class="close-popup">&times;</button>
+        </div>
+    </div>
+
+    <!-- Register Popup -->
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <p class="auth-link">Already have an account? <a href="#" id="show-login">Login here</a></p>
+            <button class="close-popup">&times;</button>
+        </div>
+    </div>
+</body>
+</html>

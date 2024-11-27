@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AgriChamber</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/html/home.html" class="logo">
+                <img src="/assets/logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
+                <h1>AgriChamber</h1>
+            </a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-nav">
+                    <li><a href="/html/home.html">Home</a></li>
+                    <li><a href="/html/services.html">Services</a></li>
+                    <li><a href="/html/newsAndEvents.html">News and Events</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="/html/memberDirectory.html">Member Directory</a></li>
+                    <li><a href="/html/contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-outline">Member Login</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>About AgriChamber</h2>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Mission</h3>
+                        <p>Our mission is to foster economic growth, support businesses, and create a thriving community by providing innovative solutions, expert guidance, and strategic resources.</p>
+                        
+                        <h3>Vision</h3>
+                        <p>To be the leading Chamber of Commerce that empowers businesses, promotes sustainable development, and drives impactful change across industries.</p>
+
+                        <h3>History</h3>
+                        <p>Founded in 1995, our Chamber has played a pivotal role in promoting local businesses, advocating for economic policies, and creating opportunities for growth in our community. Over the years, we have helped numerous enterprises reach new heights and contribute to the prosperity of the region.</p>
+                        
+                        <h3>Values</h3>
+                        <ul>
+                            <li>Integrity: We uphold the highest standards of honesty and professionalism in all our dealings.</li>
+                            <li>Collaboration: We believe in the power of partnership and working together to achieve common goals.</li>
+                            <li>Innovation: We embrace change and continuously seek creative solutions to solve challenges.</li>
+                            <li>Excellence: We strive for the highest level of quality and performance in everything we do.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="team">
+    <div class="container">
+        <h3>Our Team</h3>
+        <p>Our dedicated team consists of professionals with expertise in business development, finance, marketing, and community engagement. We work together to deliver exceptional value and services to our members.</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="/assets/Ceo.webp" alt="Esther Doe" width="150" height="150">
+                <div class="team-member-info">
+                    <h4>Esther Doe</h4>
+                    <p>President</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="/assets/DIRECTORS.jpeg" alt="John Smith" width="150" height="150">
+                <div class="team-member-info">
+                    <h4>John Smith</h4>
+                    <p>Vice President</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="/assets/director.webp" alt="Alice Johnson"  width="150" height="150">
+                <div class="team-member-info">
+                    <h4>Alice Johnson</h4>
+                    <p>Director of Communications</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="/assets/member.webp" alt="Mike Brown" width="150" height="150">
+                <div class="team-member-info">
+                    <h4>Mike Brown</h4>
+                    <p>Member Relations Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="cta">
+            <div class="container">
+                <h3>Join AgriChamber Today</h3>
+                <p>Become a part of our thriving agricultural community and help shape the future of farming.</p>
+                <button class="btn btn-large">Become a Member</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="/html/newsAndEvents.html">News and Events</a></li>
+                        <li><a href="/html/contactUs.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Information</h4>
+                    <p>123 Farm Street, Agricultural city, Country</p>
+                    <p>Phone: +264 123 4567</p>
+                    <p>Email: info@agrichamber.com</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 AgriChamber. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Login Popup -->
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit"  class="btn btn-primary">Login</button>
+            </form>
+            <p class="auth-link">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+            <button class="close-popup">&times;</button>
+        </div>
+    </div>
+
+    <!-- Register Popup -->
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <p class="auth-link">Already have an account? <a href="#" id="show-login">Login here</a></p>
+            <button class="close-popup">&times;</button>
+        </div>
+    </div>
+</body>
+</html>
+
