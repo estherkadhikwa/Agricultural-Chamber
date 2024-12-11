@@ -12,6 +12,9 @@ const firebaseConfig = {
     measurementId: "G-2HC71SF4PH"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
 // Check if analytics is supported before initializing
 isSupported().then((supported) => {
     if (supported) {
@@ -22,8 +25,7 @@ isSupported().then((supported) => {
     }
   });
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
@@ -123,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Redirect to login page if trying to access member dashboard
             if (window.location.pathname.includes('member-dashboard.html')) {
-                window.location.href = 'login.html';
+                window.location.href = 'index.html';
             }
         }
     };
@@ -135,8 +137,8 @@ document.addEventListener('DOMContentLoaded', function () {
         logoutButton.addEventListener('click', function() {
             signOut(auth).then(() => {
                 console.log("User signed out successfully");
-                alert("Logged out successfully!");
                 window.location.href = 'index.html';
+                alert("Logged out successfully!");
             }).catch((error) => {
                 console.error("Sign out error:", error);
             });
@@ -159,18 +161,18 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
 
-        // Populate recent activity (example data)
-        const activityList = document.getElementById('activity-list');
-        if (activityList) {
-            const recentActivities = [
-                'Viewed latest market report',
-                'Commented on Sustainable Farming forum',
-                'Registered for upcoming webinar',
-                'Downloaded industry trend analysis'
-            ];
+    // Populate recent activity (example data)
+    const activityList = document.getElementById('activity-list');
+    if (activityList) {
+        const recentActivities = [
+            'Viewed latest market report',
+            'Commented on Sustainable Farming forum',
+            'Registered for upcoming webinar',
+            'Downloaded industry trend analysis'
+        ];
 
-            activityList.innerHTML = recentActivities.map(activity => `<li>${activity}</li>`).join('');
-        }
+        activityList.innerHTML = recentActivities.map(activity => `<li>${activity}</li>`).join('');
+    }
     
 
     // Close menu when a link is clicked

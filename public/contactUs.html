@@ -59,29 +59,27 @@
 
         <!-- Contact Form Section -->
         <div class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="/submit_form" method="POST">
-                <div class="form-group">
-                    <label for="contact-name">Full Name</label>
-                    <input type="text" id="contact-name" name="name" required>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>Get In Touch</h2>
                 </div>
-                <div class="form-group">
-                    <label for="contact-email">Email Address</label>
-                    <input type="email" id="contact-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact-message">Message</label>
-                    <textarea id="contact-message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+                <input type="hidden" name="access_key" value="5f858b0d-139c-4035-b30b-1dee9cdd188a">
+                <label for="contact-name">Name</label>
+                <input type="text" name="name" placeholder="Full Name" class="contact-inputs" required>
+                <label for="contact-email">Email</label>
+                <input type="email" name="email" placeholder="Email" class="contact-inputs" required>
+                <label for="contact-message">Message</label>
+                <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
+                <button type="submit">Submit <img src="arrow_icon.png"></button>
+            </form>    
         </div>
     </section>
 
     <!-- Feedback Form Section -->
     <section id="feedback">
         <h2>Feedback Form</h2>
-        <form action="/submit_feedback" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <input type="hidden" name="access_key" value="5f858b0d-139c-4035-b30b-1dee9cdd188a">
             <div class="form-group">
                 <label for="feedback-name">Name</label>
                 <input type="text" id="feedback-name" name="feedback_name" placeholder="Enter your name" required>
@@ -103,7 +101,7 @@
                 <label for="feedback-message">Message</label>
                 <textarea id="feedback-message" name="feedback_message" rows="4" placeholder="Enter your feedback" required></textarea>
             </div>
-            <button type="submit" class="submit-btn">Submit Feedback</button>
+            <button type="submit">Submit <img src="arrow_icon.png"></button>
         </form>
     </section>
 
@@ -185,7 +183,5 @@
             <button class="close-popup">&times;</button>
         </div>
     </div>
-
-
 </body>
 </html>
