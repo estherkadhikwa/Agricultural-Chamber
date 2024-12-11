@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Member Directory</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="/html/home.html" class="logo">
-                <img src="/assets/logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
+            <a href="index.html" class="logo">
+                <img src="logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
                 <h1>AgriChamber</h1>
             </a>
             <nav>
@@ -20,62 +23,55 @@
                     <span></span>
                 </button>
                 <ul id="main-nav">
-                    <li><a href="/html/home.html">Home</a></li>
-                    <li><a href="/html/aboutUs.html">About Us</a></li>
-                    <li><a href="/html/newsAndEvents.html">News and Events</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="newsAndEvents.html">News and Events</a></li>
                     <li><a href="resources.html">Resources</a></li>
-                    <li><a href="/html/memberDirectory.html">Member Directory</a></li>
-                    <li><a href="/html/contactUs.html">Contact Us</a></li>
+                    <li><a href="memberDirectory.html">Member Directory</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <button class="btn btn-outline">Member Login</button>
+            <button id="member-login" class="btn btn-outline">Member Login</button>
         </div>
     </header>
-    <section id="resources">
-        <h1>Resources</h1>
+    <section id="member-directory">
+        <h1>Member Directory</h1>
         
-        <!-- Research Reports -->
-        <div class="section" id="research-reports">
-            <h2>Research Reports</h2>
-            <div class="resource-item">
-                <h3>Annual Economic Report 2024</h3>
-                <p>Our latest report detailing the economic trends, forecasts, and analyses for the year 2024. A must-read for anyone involved in economic planning and strategy.</p>
-                <a href="downloads/annual-economic-report-2024.pdf" download>Download Report</a>
-            </div>
-            <div class="resource-item">
-                <h3>Market Insights: Q3 2024</h3>
-                <p>Get insights into the market performance in Q3 2024 with our comprehensive report. The report covers key sectors and emerging trends.</p>
-                <a href="downloads/market-insights-q3-2024.pdf" download>Download Report</a>
-            </div>
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for members..." onkeyup="searchMembers()">
         </div>
 
-        <!-- Best Practices -->
-        <div class="section" id="best-practices">
-            <h2>Best Practices</h2>
-            <div class="resource-item">
-                <h3>Effective Business Strategies for 2024</h3>
-                <p>This guide offers practical advice on adopting effective business strategies in the current market landscape.</p>
-                <a href="downloads/business-strategies-2024.pdf" download>Download Guide</a>
+        <!-- Member List -->
+        <div class="members-list" id="members-list">
+            <div class="member">
+                <img src="Ceo.webp" alt="Selma Willsons">
+                <h3>Selma Willsons</h3>
+                <p><strong>Company:</strong> ABC Corp</p>
+                <p><strong>Email:</strong> selmawillisons@abccorp.com</p>
+                <p><strong>Phone:</strong> +264 234 1890</p>
             </div>
-            <div class="resource-item">
-                <h3>Best Practices in Financial Management</h3>
-                <p>Explore best practices in managing finances for small and medium enterprises (SMEs) to ensure long-term growth and sustainability.</p>
-                <a href="downloads/financial-management-best-practices.pdf" download>Download Guide</a>
+            <div class="member">
+                <img src="DIRECTORS.jpeg" alt="Natanaele Smith">
+                <h3>Natanaele Smith</h3>
+                <p><strong>Company:</strong> XYZ Ltd</p>
+                <p><strong>Email:</strong> natanaelesmith@xyzltd.com</p>
+                <p><strong>Phone:</strong> +264 678 6787</p>
             </div>
-        </div>
-
-        <!-- Policy Briefs -->
-        <div class="section" id="policy-briefs">
-            <h2>Policy Briefs</h2>
-            <div class="resource-item">
-                <h3>Policy Recommendations for Sustainable Growth</h3>
-                <p>This policy brief provides recommendations for creating policies that encourage sustainable growth and development in the local business environment.</p>
-                <a href="downloads/sustainable-growth-policy-brief.pdf" download>Download Brief</a>
+            <div class="member">
+                <img src="DIRECTORS.jpg" alt="Michael Mathews">
+                <h3>Michael Mathews</h3>
+                <p><strong>Company:</strong> M&J Enterprises</p>
+                <p><strong>Email:</strong> michaelmathews@mjenterprises.com</p>
+                <p><strong>Phone:</strong> +264 456 9012</p>
             </div>
-            <div class="resource-item">
-                <h3>Trade Policy and Export Promotion</h3>
-                <p>Learn about the current trade policies and strategies aimed at boosting exports and enhancing international trade relations.</p>
-                <a href="downloads/trade-policy-brief.pdf" download>Download Brief</a>
+            <div class="member">
+                <img src="director.webp" alt="Alice Williams">
+                <h3>Alice Williams</h3>
+                <p><strong>Company:</strong> GreenTech Solutions</p>
+                <p><strong>Email:</strong> alice@greentech.com</p>
+                <p><strong>Phone:</strong> +264 890 1237</p>
             </div>
         </div>
     </section>
@@ -88,7 +84,7 @@
                         <li><a href="aboutUs.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="newsAndEvents.html">News and Events</a></li>
-                        <li><a href="/html/contactUs.html">Contact Us</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
@@ -112,6 +108,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Login Popup -->
     <div id="login-popup" class="popup">
         <div class="popup-content">
@@ -155,5 +152,7 @@
             <button class="close-popup">&times;</button>
         </div>
     </div>
+
+
 </body>
 </html>

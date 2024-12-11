@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News & Events</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="script.js" defer></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="/html/home.html" class="logo">
-                <img src="/assets/logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
+            <a href="index.html" class="logo">
+                <img src="logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
                 <h1>AgriChamber</h1>
             </a>
             <nav>
@@ -21,15 +22,16 @@
                     <span></span>
                 </button>
                 <ul id="main-nav">
-                    <li><a href="/html/home.html">Home</a></li>
-                    <li><a href="/html/aboutUs.html">About Us</a></li>
-                    <li><a href="/html/newsAndEvents.html">News and Events</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="newsAndEvents.html">News and Events</a></li>
                     <li><a href="resources.html">Resources</a></li>
-                    <li><a href="/html/memberDirectory.html">Member Directory</a></li>
-                    <li><a href="/html/contactUs.html">Contact Us</a></li>
+                    <li><a href="memberDirectory.html">Member Directory</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <button class="btn btn-outline">Member Login</button>
+            <button id="member-login" class="btn btn-outline">Member Login</button>
         </div>
     </header>
     <section id="news-events">
@@ -90,7 +92,7 @@
                         <li><a href="aboutUs.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="newsAndEvents.html">News and Events</a></li>
-                        <li><a href="/html/contactUs.html">Contact Us</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
@@ -114,6 +116,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Login Popup -->
     <div id="login-popup" class="popup">
         <div class="popup-content">
@@ -157,5 +160,8 @@
             <button class="close-popup">&times;</button>
         </div>
     </div>
+
+
+
 </body>
 </html>

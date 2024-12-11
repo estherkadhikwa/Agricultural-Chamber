@@ -29,9 +29,9 @@ body {
 }
 
 header {
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
-    padding: 1rem 0;
+    background: #2a6a2a;
+    color: white;
+    padding: 10px 0;
 }
 
 header .container {
@@ -56,6 +56,7 @@ header .container {
 
 .logo h1 {
     font-size: 1.5rem;
+    color: var(--color-background);
 }
 
 nav ul {
@@ -318,62 +319,94 @@ footer a:hover {
 }
 
 /* About Us Page Styles */
-h3 {
+/* Team section styling */
+.team {
+    padding: 50px 0;
+    background-color: #f9f9f9;
     text-align: center;
-    margin: 50px;
 }
 
+.team h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2a6a2a; /* AgriChamber green */
+}
+
+.team p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Team grid layout */
 .team-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
     justify-content: center;
-    gap: 2rem;
+    align-items: start;
 }
 
-h3 {
-    text-align: center;
-    margin: 25px;
-}
-
+/* Individual team member card */
 .team-member {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    width: calc(50% - 1rem);
-    max-width: 400px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .team-member:hover {
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 1rem;
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #2a6a2a; /* AgriChamber green */
 }
 
 .team-member-info {
-    flex: 1;
+    padding: 15px;
+    text-align: center;
 }
 
-.team-member h4 {
-    margin: 0 0 0.5rem;
-    color: var(--color-primary);
+.team-member-info h4 {
+    font-size: 1.2rem;
+    color: #2a6a2a;
+    margin-bottom: 5px;
 }
 
-.team-member p {
-    margin: 0;
-    color: var(--color-text);
+.team-member-info p {
+    font-size: 0.9rem;
+    color: #777;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-    .team-member {
+    header #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #005f73;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    header ul.show {
+        display: flex;
+    }
+
+    #search-input {
         width: 100%;
     }
 }
@@ -581,6 +614,78 @@ a:hover {
     text-decoration: underline;
 }
 
+        /* Crop Yield Calculator and Financial Planning Tool Styles */
+        #crop-yield-calculator,
+        #financial-planning-tool {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        #crop-yield-calculator h2,
+        #financial-planning-tool h2 {
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+
+        #yield-form,
+        #financial-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        #yield-result,
+        #financial-result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9f7ef;
+            border-radius: 8px;
+        }
+
+        #yield-result h3,
+        #financial-result h3 {
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        .text-danger {
+            color: #dc3545;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+        }
+
 @media screen and (max-width: 768px) {
     #resources {
         margin: 10px;
@@ -627,35 +732,50 @@ h1 {
     margin: 0 auto;
 }
 
+/* Members List */
 .members-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
 }
 
 .member {
-    background-color: #f9f9f9;
+    background: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
     padding: 15px;
-    margin: 10px;
-    width: 45%;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
 }
 
 .member:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #2a6a2a;
 }
 
 .member h3 {
-    font-size: 1.4em;
-    color: #333;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #2a6a2a;
 }
 
 .member p {
-    font-size: 1em;
+    margin: 5px 0;
+    font-size: 0.9rem;
     color: #555;
-    line-height: 1.6;
+}
+
+.member p strong {
+    color: #333;
 }
 
 @media screen and (max-width: 768px) {
@@ -788,6 +908,97 @@ a:hover {
     .contact-form button {
         width: 100%;
     }
+
+    .feedback-form {
+        padding: 1.5rem;
+    }
+
+    .feedback-form h2 {
+        font-size: 1.8rem;
+    }
+
+    .feedback-form p {
+        font-size: 1rem;
+    }
+
+    .feedback-form .form-group input,
+    .feedback-form .form-group textarea {
+        padding: 0.75rem;
+    }
+
+    .feedback-form .form-group .btn-submit {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Feedback Form Styles */
+#feedback {
+    background-color: #f9f9f9; /* Same as the contact form background */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* Consistent spacing with other sections */
+}
+
+#feedback h2 {
+    font-size: 1.8em;
+    color: black; /* Same color as other section headings */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#feedback .form-group {
+    margin-bottom: 20px;
+}
+
+#feedback .form-group label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+#feedback .form-group input,
+#feedback .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#feedback .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#feedback button {
+    background-color: var(--color-primary-light);
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#feedback button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    #feedback .form-group input,
+    #feedback .form-group textarea,
+    #feedback .form-group select {
+        font-size: 1.1em;
+    }
+
+    #feedback button {
+        width: 100%;
+    }
 }
 
 /* Popup Styles */
@@ -878,4 +1089,76 @@ a:hover {
 
 .auth-link a:hover {
     text-decoration: underline;
+}
+
+/* Member Dashboard Styles */
+.member-content {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.welcome-message {
+    margin-bottom: 2rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h4 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.dashboard-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-card ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dashboard-card ul li a:hover {
+    color: var(--color-primary);
+}
+
+.recent-activity {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activity h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+#activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+#activity-list li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
 }

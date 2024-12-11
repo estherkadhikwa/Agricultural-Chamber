@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - AgriChamber</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
+                <h1>AgriChamber</h1>
+            </a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="newsAndEvents.html">News and Events</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="memberDirectory.html">Member Directory</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button id="member-login" class="btn btn-outline">Member Login</button>
+        </div>
+    </header>
+    <main>
+        <section id="resources">
+            <h1>Resources</h1>
+            
+            <!-- Research Reports -->
+            <div class="section" id="research-reports">
+                <h2>Research Reports</h2>
+                <div class="resource-item">
+                    <h3>Annual Economic Report 2024</h3>
+                    <p>Our latest report detailing the economic trends, forecasts, and analyses for the year 2024. A must-read for anyone involved in economic planning and strategy.</p>
+                    <a href="downloads/annual-economic-report-2024.pdf" download>Download Report</a>
+                </div>
+                <div class="resource-item">
+                    <h3>Market Insights: Q3 2024</h3>
+                    <p>Get insights into the market performance in Q3 2024 with our comprehensive report. The report covers key sectors and emerging trends.</p>
+                    <a href="downloads/market-insights-q3-2024.pdf" download>Download Report</a>
+                </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="section" id="best-practices">
+                <h2>Best Practices</h2>
+                <div class="resource-item">
+                    <h3>Effective Business Strategies for 2024</h3>
+                    <p>This guide offers practical advice on adopting effective business strategies in the current market landscape.</p>
+                    <a href="downloads/business-strategies-2024.pdf" download>Download Guide</a>
+                </div>
+                <div class="resource-item">
+                    <h3>Best Practices in Financial Management</h3>
+                    <p>Explore best practices in managing finances for small and medium enterprises (SMEs) to ensure long-term growth and sustainability.</p>
+                    <a href="downloads/financial-management-best-practices.pdf" download>Download Guide</a>
+                </div>
+            </div>
+
+            <!-- Policy Briefs -->
+            <div class="section" id="policy-briefs">
+                <h2>Policy Briefs</h2>
+                <div class="resource-item">
+                    <h3>Policy Recommendations for Sustainable Growth</h3>
+                    <p>This policy brief provides recommendations for creating policies that encourage sustainable growth and development in the local business environment.</p>
+                    <a href="downloads/sustainable-growth-policy-brief.pdf" download>Download Brief</a>
+                </div>
+                <div class="resource-item">
+                    <h3>Trade Policy and Export Promotion</h3>
+                    <p>Learn about the current trade policies and strategies aimed at boosting exports and enhancing international trade relations.</p>
+                    <a href="downloads/trade-policy-brief.pdf" download>Download Brief</a>
+                </div>
+            </div>
+
+            <!-- Crop Yield Calculator -->
+            <div class="section" id="crop-yield-calculator">
+                <h2>Crop Yield Calculator</h2>
+                <div class="resource-item">
+                    <form id="yield-form">
+                        <div class="form-group">
+                            <label for="crop-type">Crop Type:</label>
+                            <select id="crop-type" required>
+                                <option value="">Select a crop</option>
+                                <option value="corn">Corn</option>
+                                <option value="wheat">Wheat</option>
+                                <option value="soybeans">Soybeans</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="field-size">Field Size (acres):</label>
+                            <input type="number" id="field-size" min="0" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="yield-per-acre">Expected Yield per Acre:</label>
+                            <input type="number" id="yield-per-acre" min="0" step="0.1" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Calculate Yield</button>
+                    </form>
+                    <div id="yield-result" class="mt-4"></div>
+                </div>
+            </div>
+
+            <!-- Financial Planning Tool -->
+            <div class="section" id="financial-planning-tool">
+                <h2>Financial Planning Tool</h2>
+                <div class="resource-item">
+                    <form id="financial-form">
+                        <div class="form-group">
+                            <label for="income">Annual Income:</label>
+                            <input type="number" id="income" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenses">Annual Expenses:</label>
+                            <input type="number" id="expenses" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="savings-goal">Savings Goal:</label>
+                            <input type="number" id="savings-goal" min="0" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Calculate Plan</button>
+                    </form>
+                    <div id="financial-result" class="mt-4"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="newsAndEvents.html">News and Events</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Information</h4>
+                    <p>123 Farm Street, Agricultural City, Country</p>
+                    <p>Phone: +264 123 4567</p>
+                    <p>Email: info@agrichamber.com</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 AgriChamber. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Popup -->
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit"  class="btn btn-primary">Login</button>
+            </form>
+            <p class="auth-link">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+            <button class="close-popup">&times;</button>
+        </div>
+    </div>
+
+    <!-- Register Popup -->
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <p class="auth-link">Already have an account? <a href="#" id="show-login">Login here</a></p>
+            <button class="close-popup">&times;</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yieldForm = document.getElementById('yield-form');
+            const yieldResult = document.getElementById('yield-result');
+            const financialForm = document.getElementById('financial-form');
+            const financialResult = document.getElementById('financial-result');
+
+            // Crop Yield Calculator
+            yieldForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const cropType = document.getElementById('crop-type').value;
+                const fieldSize = parseFloat(document.getElementById('field-size').value);
+                const yieldPerAcre = parseFloat(document.getElementById('yield-per-acre').value);
+
+                if (cropType && !isNaN(fieldSize) && !isNaN(yieldPerAcre)) {
+                    const totalYield = fieldSize * yieldPerAcre;
+                    yieldResult.innerHTML = `
+                        <h3>Estimated Yield</h3>
+                        <p>Crop: ${cropType}</p>
+                        <p>Total Yield: ${totalYield.toFixed(2)} bushels</p>
+                    `;
+                } else {
+                    yieldResult.innerHTML = '<p class="text-danger">Please fill in all fields correctly.</p>';
+                }
+            });
+
+            // Financial Planning Tool
+            financialForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const income = parseFloat(document.getElementById('income').value);
+                const expenses = parseFloat(document.getElementById('expenses').value);
+                const savingsGoal = parseFloat(document.getElementById('savings-goal').value);
+
+                if (!isNaN(income) && !isNaN(expenses) && !isNaN(savingsGoal)) {
+                    const surplus = income - expenses;
+                    const timeToReachGoal = savingsGoal / surplus;
+
+                    financialResult.innerHTML = `
+                        <h3>Financial Plan</h3>
+                        <p>Annual Surplus: $${surplus.toFixed(2)}</p>
+                        <p>Time to Reach Savings Goal: ${timeToReachGoal.toFixed(1)} years</p>
+                        <p>Monthly Savings Needed: $${(savingsGoal / 12).toFixed(2)}</p>
+                    `;
+                } else {
+                    financialResult.innerHTML = '<p class="text-danger">Please fill in all fields correctly.</p>';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

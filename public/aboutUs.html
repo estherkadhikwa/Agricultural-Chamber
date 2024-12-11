@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - AgriChamber</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="script.js" defer></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="/html/home.html" class="logo">
-                <img src="/assets/logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
+            <a href="index.html" class="logo">
+                <img src="logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
                 <h1>AgriChamber</h1>
             </a>
             <nav>
@@ -21,15 +22,16 @@
                     <span></span>
                 </button>
                 <ul id="main-nav">
-                    <li><a href="/html/home.html">Home</a></li>
-                    <li><a href="/html/services.html">Services</a></li>
-                    <li><a href="/html/newsAndEvents.html">News and Events</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="newsAndEvents.html">News and Events</a></li>
                     <li><a href="resources.html">Resources</a></li>
-                    <li><a href="/html/memberDirectory.html">Member Directory</a></li>
-                    <li><a href="/html/contactUs.html">Contact Us</a></li>
+                    <li><a href="memberDirectory.html">Member Directory</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <button class="btn btn-outline">Member Login</button>
+            <button id="member-login" class="btn btn-outline">Member Login</button>
         </div>
     </header>
 
@@ -61,6 +63,7 @@
                             <li>Excellence: We strive for the highest level of quality and performance in everything we do.</li>
                         </ul>
                     </div>
+                
                 </div>
             </div>
         </section>
@@ -71,28 +74,28 @@
         <p>Our dedicated team consists of professionals with expertise in business development, finance, marketing, and community engagement. We work together to deliver exceptional value and services to our members.</p>
         <div class="team-grid">
             <div class="team-member">
-                <img src="/assets/Ceo.webp" alt="Esther Doe" width="150" height="150">
+                <img src="Ceo.webp" alt="Esther Doe" width="150" height="150">
                 <div class="team-member-info">
                     <h4>Esther Doe</h4>
                     <p>President</p>
                 </div>
             </div>
             <div class="team-member">
-                <img src="/assets/DIRECTORS.jpeg" alt="John Smith" width="150" height="150">
+                <img src="DIRECTORS.jpeg" alt="John Smith" width="150" height="150">
                 <div class="team-member-info">
                     <h4>John Smith</h4>
                     <p>Vice President</p>
                 </div>
             </div>
             <div class="team-member">
-                <img src="/assets/director.webp" alt="Alice Johnson"  width="150" height="150">
+                <img src="director.webp" alt="Alice Johnson"  width="150" height="150">
                 <div class="team-member-info">
                     <h4>Alice Johnson</h4>
                     <p>Director of Communications</p>
                 </div>
             </div>
             <div class="team-member">
-                <img src="/assets/member.webp" alt="Mike Brown" width="150" height="150">
+                <img src="member.webp" alt="Mike Brown" width="150" height="150">
                 <div class="team-member-info">
                     <h4>Mike Brown</h4>
                     <p>Member Relations Manager</p>
@@ -106,7 +109,7 @@
             <div class="container">
                 <h3>Join AgriChamber Today</h3>
                 <p>Become a part of our thriving agricultural community and help shape the future of farming.</p>
-                <button class="btn btn-large">Become a Member</button>
+                <button id="become-member" class="btn btn-large">Become a Member</button>
             </div>
         </section>
     </main>
@@ -119,8 +122,8 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="/html/newsAndEvents.html">News and Events</a></li>
-                        <li><a href="/html/contactUs.html">Contact Us</a></li>
+                        <li><a href="newsAndEvents.html">News and Events</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
@@ -144,6 +147,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Login Popup -->
     <div id="login-popup" class="popup">
         <div class="popup-content">
@@ -187,6 +191,8 @@
             <button class="close-popup">&times;</button>
         </div>
     </div>
+
+
 </body>
 </html>
 

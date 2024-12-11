@@ -4,14 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriChamber - Your Gateway to Agricultural Excellence</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/script.js" defer></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase App -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js"></script>
+    <script type="module" src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #1b5e20;
+            text-align: center;
+        }
+        #map {
+            height: 600px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .legend {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+            margin-top: 20px;
+        }
+        .legend h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .legend-item:hover {
+            background-color: #f0f0f0;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        .info-window h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+        }
+        .info-window p {
+            margin: 0 0 5px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            #map {
+                height: 400px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="/html/home.html" class="logo">
-                <img src="/assets/logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
+            <a href="index.html" class="logo">
+                <img src="logo.jpeg" alt="AgriChamber Logo" width="40" height="40">
                 <h1>AgriChamber</h1>
             </a>
             <nav>
@@ -21,13 +93,13 @@
                     <span></span>
                 </button>
                 <ul id="main-nav">
-                    <li><a href="/html/aboutUs.html">About Us</a></li>
-                    <li><a href="/html/services.html">Services</a></li>
-                    <li><a href="/html/newsAndEvents.html">News and Events</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="newsAndEvents.html">News and Events</a></li>
                     <li><a href="resources.html">Resources</a></li>
-                    <li><a href="/html/memberDirectory.html">Member Directory</a></li>
-                    <li><a href="/html/contactUs.html">Contact Us</a></li>
-                    <li><a href="/html/features.html">Features</a></li>
+                    <li><a href="memberDirectory.html">Member Directory</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
                 </ul>
             </nav>
             <button id="member-login" class="btn btn-outline">Member Login</button>
@@ -87,9 +159,35 @@
             <div class="container">
                 <h3>Join AgriChamber Today</h3>
                 <p>Become a part of our thriving agricultural community and unlock exclusive benefits.</p>
-                <button class="btn btn-large">Become a Member</button>
+                <button id="become-member" class="btn btn-large">Become a Member</button>
             </div>
         </section>
+
+        <!-- Namibia Agricultural Map -->
+        <div class="container">
+            <h1>Namibia Agricultural Information Map</h1>
+            <div id="map"></div>
+            <div class="legend">
+                <h3>Legend</h3>
+                <div class="legend-item" data-type="all">
+                    <div class="legend-color" style="background-color: #808080;"></div>
+                    <span>Show All</span>
+                </div>
+                <div class="legend-item" data-type="region">
+                    <div class="legend-color" style="background-color: #4CAF50;"></div>
+                    <span>Agricultural Regions</span>
+                </div>
+                <div class="legend-item" data-type="market">
+                    <div class="legend-color" style="background-color: #FFC107;"></div>
+                    <span>Markets</span>
+                </div>
+                <div class="legend-item" data-type="extension">
+                    <div class="legend-color" style="background-color: #2196F3;"></div>
+                    <span>Extension Services</span>
+                </div>
+            </div>
+        </div>
+    
 
         <section class="resources">
             <div class="container">
@@ -133,7 +231,7 @@
                         <li><a href="aboutUs.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="newsAndEvents.html">News and Events</a></li>
-                        <li><a href="/html/contactUs.html">Contact Us</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
